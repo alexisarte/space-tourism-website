@@ -2,7 +2,7 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <>
+    <div className="bg-[url(/src/assets/home/background-home-desktop.jpg)] min-h-screen">
       <Header />
       <div>
         <h3>SO, YOU WANT TO TRAVEL TO</h3>
@@ -15,7 +15,7 @@ const Home = () => {
         </p>
         <div>explore</div>
       </div>
-    </>
+    </div>
   );
 };
 

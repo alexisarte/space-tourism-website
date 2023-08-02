@@ -32,8 +32,8 @@ const Destination = () => {
 
   return (
     <>
-      <Header />
-      <div>
+      <div className="bg-[url(/src/assets/destination/background-destination-desktop.jpg)] min-h-screen">
+        <Header />
         <div>
           <h5>01 pick your destination</h5>
           <img src={destination?.images.png} alt="destination" />

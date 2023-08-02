@@ -27,8 +27,8 @@ const Crew = () => {
 
   return (
     <>
-      <Header />
-      <div>
+      <div className="bg-[url(/src/assets/crew/background-crew-desktop.jpg)] min-h-screen">
+        <Header />
         <div>
           <h5>02 meet your crew</h5>
           <img src={crew?.images.png} alt="crew" />
