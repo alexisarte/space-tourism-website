@@ -27,23 +27,28 @@ const Crew = () => {
 
   return (
     <>
-      <div className="bg-[url(/src/assets/crew/background-crew-desktop.jpg)] min-h-screen">
+      <div className="bg-crew min-h-screen">
         <Header />
-        <div>
-          <h5>02 meet your crew</h5>
-          <img src={crew?.images.png} alt="crew" />
+        <div className="flex">
+          <div>
+            <div>
+              <span>{crew?.role}</span>
+              <h2>{crew?.name}</h2>
+              <p>{crew?.bio}</p>
+            </div>
+            <nav onClick={(e) => handleOnclick(e)}>
+              <li>Douglas Hurley</li>
+              <li>Mark Shuttleworth</li>
+              <li>Victor Glover</li>
+              <li>Anousheh Ansari</li>
+            </nav>
+          </div>
+          <img
+            src={crew?.images.webp}
+            alt="crew"
+            className="w-[177.12px] h-[222px] sm:w-[456.37px] sm:h-[572px] md:w-[568.07px] md:h-[712px]"
+          />
         </div>
-        <div>
-          <span>{crew?.role}</span>
-          <h2>{crew?.name}</h2>
-          <p>{crew?.bio}</p>
-        </div>
-        <nav onClick={(e) => handleOnclick(e)}>
-          <li>Douglas Hurley</li>
-          <li>Mark Shuttleworth</li>
-          <li>Victor Glover</li>
-          <li>Anousheh Ansari</li>
-        </nav>
       </div>
     </>
   );

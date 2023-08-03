@@ -32,11 +32,11 @@ const Destination = () => {
 
   return (
     <>
-      <div className="bg-[url(/src/assets/destination/background-destination-desktop.jpg)] min-h-screen">
+      <div className="bg-destination min-h-screen">
         <Header />
         <div>
           <h5>01 pick your destination</h5>
-          <img src={destination?.images.png} alt="destination" />
+          <img src={destination?.images.webp} alt="destination" />
         </div>
         <div>
           <nav onClick={(e) => handleOnclick(e)}>

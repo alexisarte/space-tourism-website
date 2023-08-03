@@ -31,7 +31,7 @@ const Technology = () => {
 
   return (
     <>
-      <div className="bg-[url(/src/assets/technology/background-technology-desktop.jpg)] min-h-screen">
+      <div className="bg-technology min-h-screen">
         <Header />
         <div>
           <h5>

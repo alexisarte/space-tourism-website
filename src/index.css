@@ -17,3 +17,66 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.bg-home, .bg-crew, .bg-destination, .bg-technology {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Fondo para dispositivos móviles */
+@media (width < 640px) {
+  .bg-home {
+    background-image: url("/src/assets/home/background-home-mobile.jpg");
+  }
+
+  .bg-destination {
+    background-image: url("/src/assets/destination/background-destination-mobile.jpg");
+  }
+
+  .bg-crew {
+    background-image: url("/src/assets/crew/background-crew-mobile.jpg");
+  }
+
+  .bg-technology {
+    background-image: url("/src/assets/technology/background-technology-mobile.jpg");
+  }
+
+}
+
+/* Fondo para dispositivos tablet */
+@media (640px <= width < 768px) {
+  .bg-home {
+    background-image: url("/src/assets/home/background-home-tablet.jpg");
+  }
+
+  .bg-destination {
+    background-image: url("/src/assets/destination/background-destination-tablet.jpg");
+  }
+
+  .bg-crew {
+    background-image: url("/src/assets/crew/background-crew-tablet.jpg");
+  }
+
+  .bg-technology {
+    background-image: url("/src/assets/technology/background-technology-tablet.jpg");
+  }
+
+}
+
+/* Fondo para dispositivos de escritorio */
+@media (width >= 768px) {
+  .bg-home {
+    background-image: url("/src/assets/home/background-home-desktop.jpg");
+  }
+
+  .bg-destination {
+    background-image: url("/src/assets/destination/background-destination-desktop.jpg");
+  }
+
+  .bg-crew {
+    background-image: url("/src/assets/crew/background-crew-desktop.jpg");
+  }
+
+  .bg-technology {
+    background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+  }
+}
