@@ -19,11 +19,12 @@
 
 .bg-home, .bg-crew, .bg-destination, .bg-technology {
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
 /* Fondo para dispositivos móviles */
-@media (width < 640px) {
+@media (width <= 640px) {
   .bg-home {
     background-image: url("/src/assets/home/background-home-mobile.jpg");
   }
@@ -43,7 +44,7 @@
 }
 
 /* Fondo para dispositivos tablet */
-@media (640px <= width < 768px) {
+@media (640px <= width <= 1024px) {
   .bg-home {
     background-image: url("/src/assets/home/background-home-tablet.jpg");
   }
@@ -63,7 +64,7 @@
 }
 
 /* Fondo para dispositivos de escritorio */
-@media (width >= 768px) {
+@media (width >= 1024px) {
   .bg-home {
     background-image: url("/src/assets/home/background-home-desktop.jpg");
   }

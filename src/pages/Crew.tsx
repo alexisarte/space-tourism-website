@@ -46,7 +46,7 @@ const Crew = () => {
           <img
             src={crew?.images.webp}
             alt="crew"
-            className="w-[177.12px] h-[222px] sm:w-[456.37px] sm:h-[572px] md:w-[568.07px] md:h-[712px]"
+            className="w-[177.12px] h-[222px] sm:w-[456.37px] sm:h-[572px] lg:w-[568.07px] lg:h-[712px]"
           />
         </div>
       </div>

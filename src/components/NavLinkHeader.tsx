@@ -5,10 +5,13 @@ interface Text {
   text: string;
 }
 
-const NavLinkHeader = ({index, text}: Text) => {
+const NavLinkHeader = ({ index, text }: Text) => {
   return (
     <Link to={`/${text}`}>
-      <span>{`${index} ${text}`}</span>
+      <span>
+        <span className="font-bold">{`${index}`}</span>
+        {` ${text}`}
+      </span>
     </Link>
   );
 };
