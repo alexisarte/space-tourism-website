@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -21,6 +21,15 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bellefair', serif;
+}
+
+h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+}
+
+h5 {
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .bg-home, .bg-crew, .bg-destination, .bg-technology {
