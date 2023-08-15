@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Logo from "../assets/shared/logo.svg";
-import IconHamburguer from "../assets/shared/icon-hamburger.svg";
-import IconClose from "../assets/shared/icon-close.svg";
+import Logo from "../../assets/shared/logo.svg";
+import IconHamburguer from "../../assets/shared/icon-hamburger.svg";
+import IconClose from "../../assets/shared/icon-close.svg";
 
 import NavLinkHeader from "./NavLinkHeader";
 

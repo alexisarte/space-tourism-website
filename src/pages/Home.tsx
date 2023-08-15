@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/header/Header";
 
 const Home = () => {
   return (
@@ -6,9 +6,9 @@ const Home = () => {
       <Header />
       <main className="grid lg:grid-cols-2 lg:pt-36 lg:text-left lg:gap-0 place-items-center lg:items-end sm:gap-28 gap-20 pt-16 text-center">
         <div className="max-w-[327px]  sm:max-w-[444px]">
-          <h5 className="text-indigo-200 sm:text-xl lg:text-[28px] tracking-[4.75px] uppercase">So, you want to travel to</h5>
+          <h5 className="text-pale-blue sm:text-xl lg:text-[28px] tracking-[4.75px] uppercase">So, you want to travel to</h5>
           <h1 className="text-[80px] sm:text-[150px] uppercase p-">Space</h1>
-          <p className="text-indigo-200 text-[15px] leading-loose sm:text-base lg:text-lg">
+          <p className="text-pale-blue text-[15px] leading-loose sm:text-base lg:text-lg">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this

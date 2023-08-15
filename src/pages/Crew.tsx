@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Header from "../components/Header";
+import Header from "../components/header/Header";
 import data from "../data.json";
 
 type CrewType = {
@@ -31,11 +31,12 @@ const Crew = () => {
         <Header />
         <div className="flex">
           <div>
-            <div>
+            <h5>02 Meet your crew</h5>
+            <article>
               <span>{crew?.role}</span>
               <h2>{crew?.name}</h2>
               <p>{crew?.bio}</p>
-            </div>
+            </article>
             <nav onClick={(e) => handleOnclick(e)}>
               <li>Douglas Hurley</li>
               <li>Mark Shuttleworth</li>
