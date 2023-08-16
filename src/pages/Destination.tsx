@@ -20,13 +20,13 @@ const Destination = () => {
   const [destination, setDestination] = useState<DestinationType | undefined>(
     data.destinations[0]
   );
-  const [isActive, setIsActive] = useState('Moon');
+  const [activeItem, setActiveItem] = useState("Moon");
 
   const destinations = [
-    { name: 'Moon', isActive: isActive  === 'Destination 1' },
-    { name: 'Mars', isActive: isActive  === 'Destination 2' },
-    { name: 'Europa', isActive: isActive  === 'Destination 3' },
-    { name: 'Titan', isActive: isActive  === 'Destination 3' },
+    { name: "Moon", isActive: activeItem === "Moon" },
+    { name: "Mars", isActive: activeItem === "Mars" },
+    { name: "Europa", isActive: activeItem === "Europa" },
+    { name: "Titan", isActive: activeItem === "Titan" },
   ];
 
   // const handleOnclick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
@@ -55,14 +55,14 @@ const Destination = () => {
       (destination) => destination.name === formattedName
     );
     setDestination(newDestination);
-    setIsActive(destinationName);
+    setActiveItem(destinationName);
   };
 
   return (
     <>
       <section className="bg-destination min-h-screen">
         <Header />
-        <main className="grid place-items-center text-center">
+        <main className="grid place-items-center text-center py-6">
           <section className="grid place-items-center">
             <h5 className="tracking-[2.70px]">
               <span className="opacity-25 font-bold">01</span> pick your
@@ -74,39 +74,41 @@ const Destination = () => {
               className="w-2/5 my-8"
             />
           </section>
-          <div>
+          <section>
             <nav>
               <ul className="flex justify-center gap-10 text-sm uppercase list-none text-pale-blue">
-                {destinations.map((destination) => (
+                {destinations.map((d) => (
                   <DestinationItem
-                    key={destination.name}
-                    name={destination.name}
+                    key={d.name}
+                    name={d.name}
                     onclick={handleOnClick}
-                    isActive={isActive}
+                    isActive={d.isActive}
                   />
                 ))}
               </ul>
             </nav>
-            <h2 className="text-[56px] sm:text-[80px] lg:text-[100px]">
-              {destination?.name}
-            </h2>
-            <p className="text-pale-blue text-[15px] leading-[25px] max-w-[327px]">
-              {destination?.description}
-            </p>
-            <hr className="border-gray-700" />
-            <div className="uppercase">
+            <div className="grid gap-8 mt-4">
+              <div>
+                <h2 className="text-[56px] sm:text-[80px] lg:text-[100px]">
+                  {destination?.name}
+                </h2>
+                <p className="text-pale-blue text-[15px] leading-[25px] max-w-[327px]">
+                  {destination?.description}
+                </p>
+              </div>
+              <hr className="border-gray-700" />
               <div>
                 <span className="text-pale-blue text-sm">AVG. DISTANCE</span>
-                <p className="text-[28px]">{destination?.distance}</p>
+                <p className="text-[28px] uppercase">{destination?.distance}</p>
               </div>
-              <div>
-                <span className="block text-pale-blue text-sm uppercase">
+              <div className="uppercase">
+                <span className="block text-pale-blue text-sm">
                   Est. travel time
                 </span>
                 <time className="text-[28px]">{destination?.travel}</time>
               </div>
             </div>
-          </div>
+          </section>
         </main>
       </section>
     </>
