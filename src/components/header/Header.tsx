@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center pl-11 pt-11">
       <img src={Logo} />
-      <hr className="relative left-10 z-10 w-[673px] h-px opacity-25 bg-white hidden lg:block" />
+      <hr className="relative left-10 z-10 w-[673px] h-px bg-white opacity-25  hidden lg:block" />
       <button className="relative z-20 sm:hidden pr-11" onClick={toogleMenu}>
         <img src={isOpen ? IconClose : IconHamburguer} />
       </button>
