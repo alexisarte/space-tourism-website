@@ -62,12 +62,14 @@ const Destination = () => {
     <>
       <section className="bg-destination min-h-screen">
         <Header />
-        <main className="grid place-items-center text-center py-6">
+        <main className="grid place-items-center text-center pt-6 pb-[57px] sm:pt-10 sm:pb-[62px] ">
           <section className="grid place-items-center">
-            <h5 className="tracking-[2.70px]">
-              <span className="opacity-25 font-bold">01</span> pick your
-              destination
-            </h5>
+            <header className="w-screen sm:text-left sm:px-11">
+              <h5 className="tracking-[2.70px] sm:text-lg sm:tracking-[3.38px]">
+                <span className="opacity-25 font-bold">01</span> pick your
+                destination
+              </h5>
+            </header>
             <img
               src={destination?.images.webp}
               alt="destination"
@@ -76,7 +78,7 @@ const Destination = () => {
           </section>
           <section>
             <nav>
-              <ul className="flex justify-center gap-10 text-sm uppercase list-none text-pale-blue">
+              <ul className="flex justify-center gap-10 text-sm uppercase list-none text-pale-blue sm:text-base">
                 {destinations.map((d) => (
                   <DestinationItem
                     key={d.name}
@@ -87,26 +89,30 @@ const Destination = () => {
                 ))}
               </ul>
             </nav>
-            <div className="grid gap-8 mt-4">
+            <div className="pt-5 sm:pt-8">
               <div>
                 <h2 className="text-[56px] sm:text-[80px] lg:text-[100px]">
                   {destination?.name}
                 </h2>
-                <p className="text-pale-blue text-[15px] leading-[25px] max-w-[327px]">
+                <p className="text-pale-blue text-[15px] leading-[25px] max-w-[327px] sm:max-w-[573px] sm:text-base">
                   {destination?.description}
                 </p>
               </div>
-              <hr className="border-gray-700" />
-              <div>
-                <span className="text-pale-blue text-sm">AVG. DISTANCE</span>
-                <p className="text-[28px] uppercase">{destination?.distance}</p>
-              </div>
-              <div className="uppercase">
-                <span className="block text-pale-blue text-sm">
-                  Est. travel time
-                </span>
-                <time className="text-[28px]">{destination?.travel}</time>
-              </div>
+              <hr className="border-gray-700 mt-8 mb-8 sm:mt-" />
+              <section className="grid gap-8 sm:flex sm:justify-evenly">
+                <div className="mb-">
+                  <span className="text-pale-blue text-sm">AVG. DISTANCE</span>
+                  <p className="text-[28px] uppercase">
+                    {destination?.distance}
+                  </p>
+                </div>
+                <div className="uppercase">
+                  <span className="block text-pale-blue text-sm">
+                    Est. travel time
+                  </span>
+                  <time className="text-[28px]">{destination?.travel}</time>
+                </div>
+              </section>
             </div>
           </section>
         </main>
